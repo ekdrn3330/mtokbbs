@@ -17,14 +17,18 @@ function Login() {
             <Container>
                 <Form action="/login" method="POST">
                     <h2>Login</h2>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>아이디</Form.Label>
-                        <Form.Control type='text' name='input_id' placeholder="아이디를 입력해주세요." />
+                    <Form.Group as={Row} className="mb-3" controlId="formBasicId">
+                        <Form.Label column sm="2">아이디</Form.Label>
+                        <Col sm="10">
+                            <Form.Control type='text' name='input_id' placeholder="아이디를 입력해주세요." />
+                        </Col>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                        <Form.Label>비밀번호</Form.Label>
-                        <Form.Control type="password" name='input_pw' placeholder="비밀번호를 입력해주세요." />
+                    <Form.Group as={Row} className="mb-3" controlId="formBasicPassword">
+                        <Form.Label column sm="2">비밀번호</Form.Label>
+                        <Col sm="10">
+                            <Form.Control type="password" name='input_pw' placeholder="비밀번호를 입력해주세요." />
+                        </Col>
                     </Form.Group>
                     <Button variant="primary" type="submit">
                         Login
